@@ -1,0 +1,186 @@
+* {
+    align-items: center;
+    justify-content: center;
+}
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: #e9d8a6;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex; 
+    justify-content: space-between;
+    background-color: #264653;
+    margin: 0;
+    color: #e9c46a;
+    width: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
+/*  font-family: 'Bebas Neue', cursive;*/
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+ header button {
+    padding: 5px;
+    border-radius: 10px;
+    height: 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    width: 11vh;
+    font-size: 14px;
+    background-color: #2a9d8f;
+    color: #e9c46a;
+    margin-right: 20px;
+
+}
+ 
+
+ #index_page {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.pokemon_display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border: 2px solid #264653;
+    margin: 10px 10px 30px 10px;
+    border-radius: 0px;
+    background-color: #ffffff;
+    box-shadow:  9px 9px 23px #c9c9c9,
+                 -9px -9px 23px #ffffff;
+} 
+
+#img_index {  
+    margin: 15px 0px 10px 0px;
+    width: 70%;
+    justify-items: center;
+
+}
+
+.pokemon_header {
+    text-align: center;
+    margin-top: 5px; 
+    justify-items: center; 
+    align-items: center;
+}
+.index_a {
+font-weight: bold;
+font-size: 20px;
+color: #264653;
+text-decoration: none;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.edit_index {
+    background-color: #2a9d8f;
+    color: #e9c46a;
+    border-radius: 10px;
+    width: 60px;
+    font-size: 15px;
+}
+
+.delete_index {
+    background-color: #2a9d8f;
+    color: #e9c46a;
+    border-radius: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 75px;
+    font-size: 15px;
+}
+
+/*<--- Show -->*/
+#show_main {  
+    display: flex;
+}
+#show_main div {
+    align-items: center;
+    width: 65%;
+    height: 85%;
+    border: 2px solid #264653;
+margin: 40px 0px 40px 0px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow:  9px 9px 23px #c9c9c9, -9px -9px 23px #ffffff;
+}
+#show_main ul {
+list-style: none;
+
+}
+
+/*----New-----*/
+
+.new_main input[type="submit"] {
+    padding: 5px;
+    border-radius: 10px;
+    height: 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    width: 11vh;
+    font-size: 14px;
+    background-color: #2a9d8f;
+    color: #e9c46a;
+    margin-right: 20px;
+}
+
+.new_main input[type="text"] {
+ width: 150px;
+ height: 2rem;
+ text-align: center;
+ font-size: medium;
+}
+
+/*----edit------*/
+
+.edit_main {
+    display: flex;
+
+}
+
+#div2 {
+    align-items: center;
+    width: 65%;
+    height: 85%;
+    border: 2px solid #264653;
+margin: 40px 0px 40px 0px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow:  9px 9px 23px #c9c9c9, -9px -9px 23px #ffffff;
+
+}
+
+.edit_main input[type="submit"] {
+    padding: 5px;
+    border-radius: 10px;
+    height: 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    width: 11vh;
+    font-size: 14px;
+    background-color: #2a9d8f;
+    color: #e9c46a;
+    margin-right: 20px;
+}

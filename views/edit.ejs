@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Edit</title>
+</head>
+<body>
+    <header>
+        <h1>Pokemon</h1>
+        <button class="newButton" onclick="location.href='/pokemon'">Main Page</button>
+    </header>
+    <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+    <div class="edit_main">
+        <div id="div2">
+            <h2 id="show_h2"><%=data.name%></h2>
+            <img src="<%=data.img%>" alt="" id="show_img">
+            <div class="name">
+                <h2>Name</h2>
+                <input type="text" name ="name"placeholder="<%=data.name%>">
+            </div>
+            <div class="stats">
+                <h2>Stats</h2>
+                <input type="text" name="attack" placeholder=" Attack Stats">
+                <input type="text" name="defense" placeholder=" Defense Stats">
+                <input type="text" name="hp" placeholder=" HP Stats">
+            </div>
+            <div class="type">
+                <h2>Type</h2>
+                <%for(let i = 0; i < data.type.length; i++) { %>
+                    <input type="text" name ="type"placeholder="<%=data.type[i]%>">
+               <% } %>
+            </div>
+            <input type="submit" name="" value="Submit Changes" class="submit" style="margin: 10px 10px 10px;"/>
+        </div> 
+    </div>
+</form>
+</body>
+</html>

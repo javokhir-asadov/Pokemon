@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Main Page</title>
+</head>
+<body>
+  <header>
+    <h1>Pokemon</h1>
+<button class="indexButton" onclick="location.href='/pokemon/new'">Create a Pokemon</button>
+</header>
+
+<main id="index_page">
+    <% for(let i = 0; i < 15; i++) { %>     
+    <section class="pokemon_display">
+          
+        <div class="pokemon_header">
+           <a class="index_a" href="/pokemon/<%= i %>">
+                <%= pokemon[i].name %>
+            </a> <br/>
+            <img id="img_index" src="<%= pokemon[i].img %>" alt="">
+        </div>          
+    <div class="card_footer">
+            <a href="/pokemon/<%=i; %>/edit"><button class="edit_index">Edit</button></a>
+            <form action="/pokemon/<%=i %>?_method=DELETE" method="POST">
+                <input class="delete_index" type="submit" value="DELETE" />
+            </form>
+    </div>    
+         
+</section>
+<% } %> 
+
+</main>
+</body>
+</html>

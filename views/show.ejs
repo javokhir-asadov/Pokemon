@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Pokemon</title>
+</head>
+<body>
+   <div>
+    <header>
+        <h1>Pokemon</h1>
+        <button class="showButton" onclick="location.href='/pokemon'">Main Page</button>
+    </header>
+</div>
+    <div id="show_main">
+        <div>
+        <h2 id="show_h2"><%=data.name%></h2>
+        <img src="<%=data.img%>" alt="" id="show_img">
+        <ul>
+            <h4>Type:</h4>
+            <li class="show_li"><%= data.type[0]%></li> 
+            <li class="show_li"><%= data.type[1]%></li>
+        </ul>
+        <ul>
+            <h4>Stats:</h4>
+            <li>HP:  <%=  data.stats.hp %></li>
+            <li>Attack:  <%= data.stats.attack %></li>
+            <li>Defense:  <%= data.stats.defense %></li>
+            <li>Spattack:  <%= data.stats.spattack %></li>
+            <li>Spdefense:  <%= data.stats.spdefense %></li>
+            <li>Speed:  <%= data.stats.speed %></li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>
